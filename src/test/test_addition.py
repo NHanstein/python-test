@@ -1,4 +1,4 @@
-from ../src/math import add
+from ..math import add
 from random import randint
 
 def test_spec():

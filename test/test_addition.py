@@ -1,7 +1,5 @@
+from ../src/math import add
 from random import randint
-
-def add(a, b):
-    return a + b
 
 def test_spec():
     a = randint(1, 10)

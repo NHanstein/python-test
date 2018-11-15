@@ -3,12 +3,18 @@ from random import randint
 def add(a, b):
     return a + b
 
+def test_spec():
+    a = randint(1, 10)
+    b = randint(1, 10)
+    assert add(a, b) == a + b
+
 def test_commut():
     a = randint(1, 10)
     b = randint(1, 10)
     assert add(a, b) == add(b, a)
 
-def test_spec():
+def test_assoc():
     a = randint(1, 10)
     b = randint(1, 10)
-    assert add(a, b) == a + b
+    c = randint(1, 10)
+    assert add(a, add(b, c)) == add(add(a, b), c)
